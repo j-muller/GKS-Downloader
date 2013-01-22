@@ -1,0 +1,44 @@
+{
+    "name": "Gks Downloader",
+    "version": "1.1",
+    "manifest_version": 2,
+    "description": "Trouvez vos torrents Gks en un clic depuis Allocine, IMDb, ...",
+    "permissions": [
+        "webNavigation",
+        "notifications",
+        "tabs"
+    ],
+
+    "icons": {
+        "48": "images/icon48.png"
+    },
+
+    "browser_action": {
+        "default_icon": "images/icon.ico",
+        "default_popup": "popup.html"
+    },
+
+    // "content_scripts": [
+    //     {
+    //         "matches": [
+    //             "http://www.allocine.fr/film/fichefilm_gen_cfilm=*",
+    //             "http://www.allocine.fr/series/ficheserie_gen_cserie=*"
+    //         ],
+
+    //         "js": ["contentscript.js"],
+
+    //         "run_at": "document_end"
+    //     }
+    // ],
+
+    "web_accessible_resources": [
+        "images/desktop-notif.png"
+    ]
+
+    // "background": {
+    //     "scripts": [
+    //         "jquery.js",
+    //         "background.js"
+    //     ]
+    // }
+}
