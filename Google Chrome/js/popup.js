@@ -2,7 +2,7 @@
  * @@ScriptName: popup.js
  * @@Author: Jeffrey Muller<jeffrey.muller92@gmail.com>
  * @@Create Date: 2013-01-22 23:38:38
- * @@Modify Date: 2013-01-22 23:53:33
+ * @@Modify Date: 2013-01-23 01:49:35
  *
  * Copyright (C) 2013 Jeffrey Muller
  * 
@@ -21,5 +21,16 @@
  */
 
 $(function() {
-    console.log('popup ouverte.');
+    var bkg = chrome.extension.getBackgroundPage();
+    var data = bkg.gks.get_data();
+
+    if (data.nb_results > 0) {
+        console.log(data)
+        $('.nb-torrents').text(data.nb_results + ' torrents trouvés. :-)');
+        $('.torrents').empty().append('<ul></ul>');
+
+        $(data.torrents).each(function(idx, e) {
+            $('.torrents ul').append('<li><a href="' + e.link +'" alt="' + e.title + '" title="' + e.title + '" target="_blank">' + e.title + '</a></li>');
+        });
+    }
 });

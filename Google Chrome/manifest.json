@@ -18,27 +18,28 @@
         "default_popup": "popup.html"
     },
 
-    // "content_scripts": [
-    //     {
-    //         "matches": [
-    //             "http://www.allocine.fr/film/fichefilm_gen_cfilm=*",
-    //             "http://www.allocine.fr/series/ficheserie_gen_cserie=*"
-    //         ],
-
-    //         "js": ["contentscript.js"],
-
-    //         "run_at": "document_end"
-    //     }
-    // ],
+    "content_scripts": [
+        {
+            "matches": [
+                "http://www.allocine.fr/film/fichefilm_gen_cfilm=*",
+                "http://www.allocine.fr/series/ficheserie_gen_cserie=*",
+                "http://www.jeuxvideo.com/jeux/*",
+                "http://www.imdb.com/title/*"
+            ],
+            "js": ["js/content_script.js"],
+            "run_at": "document_end"
+        }
+    ],
 
     "web_accessible_resources": [
         "images/desktop-notif.png"
-    ]
+    ],
 
-    // "background": {
-    //     "scripts": [
-    //         "jquery.js",
-    //         "background.js"
-    //     ]
-    // }
+    "background": {
+        "scripts": [
+            "js/jquery-1.9.0.js",
+            "js/gks.handler.js",
+            "js/background.js"
+        ]
+    }
 }
