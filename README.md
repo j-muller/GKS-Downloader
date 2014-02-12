@@ -22,3 +22,6 @@ If you want to contact me, you know how to proceed. ;-)
 
 - First version
 - Supported Allocine
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/j-muller/gks-downloader/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
